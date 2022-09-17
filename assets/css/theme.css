@@ -1,0 +1,105 @@
+:root {
+    /* ------- Colors ------- */   
+    --clr-light-bg: linear-gradient(to right top, #c6c8cb, #c8c9cc, #cacacc, #cccccc, #cdcdcd);
+    --clr-light-top: #e0e0eb;
+    --clr-light-bottom: #ffffffbd;
+    --clr-light-btn: #f0f0f0;
+
+    --clr-dark-bg: linear-gradient(to right top, #1b1c1d, #1f2122, #242527, #282a2d, #2d2f32);
+    --clr-dark-top: #2d3134;
+    --clr-dark-bottom: #27272e;
+
+    --clr-green-btn: #09BC57;
+    --clr-green-hover: #0c9b4a;
+    --clr-red-btn: #f15050;
+
+}
+
+/* ------- Theme ------- */
+
+#checkbox {
+    display: none;
+}
+
+.theme-container {
+    display: flex;
+    position: relative;
+    font-size: 1rem;
+    width: 7%;
+    height: 40px;
+    padding-top: 15px;
+    margin: auto;
+    border-radius: 32%;
+    cursor: pointer;
+    justify-content: center;
+}
+
+
+#checkbox:checked + .ball {
+    transform: translate(28px, -50%);
+}
+
+#day {
+    color: #b2b2b3ac;
+    background-color: transparent;
+}
+
+#night {
+    color: #31313b32;
+    background-color: transparent;
+}
+
+
+/* ------- Day ------- */
+main.day #day {
+    background-image: var(--clr-light-bg);
+    display: none;
+}
+
+main.day {
+    transition: all .3s ease;
+    background-image: var(--clr-light-bg);
+}
+
+main.day .display-bottom{
+    background-color: var(--clr-light-bottom);
+}
+
+main.day .display-top {
+    background-color: var(--clr-light-top);
+}
+
+
+/* ------- Night ------- */
+
+main.night #night {
+    background-image: var(--clr-dark-bg);
+    display: none;
+}
+
+main.night {
+    transition: all .3s ease;
+    background-image: var(--clr-dark-bg);
+}
+
+main.night .calculator-content, main.night .display-bottom{
+    background-color: var(--clr-dark-bottom);
+}
+
+main.night .display-top {
+    background-color: var(--clr-dark-top);
+}
+
+main.night .number, main.night .clr-light, main.night .char-d, main.night .input, main.night #TopDisplay{
+    color: #ffffffbd;
+}
+
+main.night .items:hover,
+main.night .items:focus {
+    background-color: var(--clr-dark-top);
+    cursor: pointer;
+}
+
+main.night .calculator-content {
+    box-shadow:  20px 20px 60px transparent;  
+}
