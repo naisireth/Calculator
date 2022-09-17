@@ -98,8 +98,7 @@ body {
     gap: 7px;
 }
 
-.items:hover,
-.items:focus {
+.items:hover{
     background-color: var(--clr-light-top);
     cursor: pointer;
     border-radius: 10px;
